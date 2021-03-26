@@ -2,6 +2,7 @@ const express = require('express')
 const axios = require('axios') // to make http request
 
 const app= express()
+const SERVER_PORT = process.env.PORT || 3366;
 let rollNo=[]
 
 app.use(express.urlencoded({extended : true}))
@@ -35,6 +36,6 @@ app.post('/',(req,res)=>{
 })
 
 
-app.listen(3366,()=>{
+app.listen(SERVER_PORT,()=>{
   console.log('Server started at localhost:3366')
 })
